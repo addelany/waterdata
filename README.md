@@ -51,3 +51,11 @@ The site data can be downloaded from WQP by mentioning the country and state, ch
 **3. Retrieve the dataset (6 tables) for WBs in the state**
 In this step run the notebook Lake2Site.ipynb. 
 
+
+## Part 2- Retrieve raw site data ##
+The raw site data is obtained for each state from WQP using a web service call. The raw data is then filtered based on the Lake to site mappings obtained in Part 1.
+
+### Usage guide ###
+In this part, run the notebook GETSITEDATA.ipynb.
+
+
