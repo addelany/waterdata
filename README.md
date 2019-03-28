@@ -12,11 +12,11 @@ The 6 csv files generated in the dataset are:
   SHAPE_AREA(sqdecimaldegrees) - Area of the water body shape in square decimal degrees
     
 2.*Bounding Box* - Table that stores details about the bounding box - coordinates of each WB read from Shapefiles in NHD. Attributes of   this table are:
-  BB_ID - ID for the water body bounding box
-  North - Minimum Latitude
-  South - Maximum Latitude
-  West - Minimum Longitude
-  East - Maximum Longitude
+  *BB_ID - ID for the water body bounding box
+  *North - Minimum Latitude
+  *South - Maximum Latitude
+  *West - Minimum Longitude
+  *East - Maximum Longitude
   
 3.*Sites* - Table that stores details of the sites (obtained from WQP)
 
@@ -43,7 +43,7 @@ The 6 csv files generated in the dataset are:
 To retrieve site information for water bodies in a state, following steps are to be done.
 
 **1. Obtain the water bodies (WB) data from NHD**
-The NHD High Resolution is available on the NHD web-site as a shapefile or file geodatabase. These can be downloaded by state. Here the scripts use them in shapefile format. Download shapefiles for water bodies of the state of interest from here and store locally in the path NHD_High_Resolution/NHD_state. 
+The NHD High Resolution is available on the [NHD web-site](http://prd-tnm.s3-website-us-west-2.amazonaws.com/?prefix=StagedProducts/Hydrography/NHD/State/HighResolution/Shape/) as a shapefile or file geodatabase. These can be downloaded by state. Here the scripts use them in shapefile format. Download shapefiles for water bodies of the state of interest from here and store locally in the path NHD_High_Resolution/NHD_state. 
 
 **2. Obtain the site csv files from WQP**
 The site data can be downloaded from WQP by mentioning the country and state, choosing site type as Lake, Reservoir, Impoundment and data as Site data only. The csv file containing the site data for each state is stored locally in the path WQP_Sites/sites_statecode.csv
