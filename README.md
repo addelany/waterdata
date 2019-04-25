@@ -3,40 +3,39 @@ Lake to sites mapping is captured in 6 csv files. These 6 tables hold the WB and
 
 The 6 csv files generated in the dataset are: 
 
-1.*Waterbody* - Table that stores details of water body
+1.*Waterbody* - Table that stores details of water body.
   This table stores details of the water body from NHD. Attributes of this table are :
-  NHD_LAKE_ID - The ID given for the water body in NHD web-site
-  AREA(sqkm) - Area of the water body in sq kms
-  ELEVATION(feet) - Elevation of the water body in feet
-  SHAPE_LENG(decimaldegrees) - Length of the water body shape in decimal degrees
-  SHAPE_AREA(sqdecimaldegrees) - Area of the water body shape in square decimal degrees
+  * NHD_LAKE_ID - The ID given for the water body in NHD web-site
+  * AREA(sqkm) - Area of the water body in sq kms
+  * ELEVATION(feet) - Elevation of the water body in feet
+  * SHAPE_LENG(decimaldegrees) - Length of the water body shape in decimal degrees
+  * SHAPE_AREA(sqdecimaldegrees) - Area of the water body shape in square decimal degrees
     
-2.*Bounding Box* - Table that stores details about the bounding box - coordinates of each WB read from Shapefiles in NHD. Attributes of   this table are:
+2.*Bounding Box* - Table that stores details about the bounding box - coordinates of each WB read from Shapefiles in NHD. Attributes of this table are:
   * BB_ID - ID for the water body bounding box
   * North - Minimum Latitude
-  *  South - Maximum Latitude
+  * South - Maximum Latitude
   * West - Minimum Longitude
   * East - Maximum Longitude
   
 3.*Sites* - Table that stores details of the sites (obtained from WQP)
 
-4.*W2B* - Relation Table from Water Body to Bounding-Box. This table stores the relation between water body and bounding box.              Attributes of this table are:
+4.*W2B* - Relation Table from Water Body to Bounding-Box. This table stores the relation between water body and bounding box. Attributes of this table are:
+  * NHD_LAKE_ID - The ID given for the water body in NHD web-site
+  * Name of the water body as per the Geographic Name Information System
+  * BB_ID - ID for the water body bounding box
 
-  NHD_LAKE_ID - The ID given for the water body in NHD web-site
-  GNIS_NAME - Name of the water body as per the Geographic Name Information System
-  BB_ID - ID for the water body bounding box
-
-5.*B2S* - Relation Table from Bounding-Box to Sites. This table stores the relation between water body and bounding box. Attributes of   this table are:
-  BB_ID - ID for the water body bounding box
-  SITE_ID - ID for the site as per the WQP
+5.*B2S* - Relation Table from Bounding-Box to Sites. This table stores the relation between water body and bounding box. Attributes of this table are:
+  * BB_ID - ID for the water body bounding box
+  * SITE_ID - ID for the site as per the WQP
   
-6.*W2S* - Relation Table from Water Body to Sites. This table stores the relation between water body and sites (obtained from WQP).       Attributes of this table are:
-  NHD_LAKE_ID - The ID given for the water body in NHD web-site
-  GNIS_NAME - Name of the water body as per the Geographic Name Information System
-  SITE_ID - ID for the site as per the WQP
-  MonitoringLocationName - Name of the site as per WQP
-  IsInsideLake - True/False depending on whether the site is inside the water body or not
-  DistToShore(m) - Distance of the site to the shore of the water body in meters
+6.*W2S* - Relation Table from Water Body to Sites. This table stores the relation between water body and sites (obtained from WQP). Attributes of this table are:
+  * NHD_LAKE_ID - The ID given for the water body in NHD web-site
+  * GNIS_NAME - Name of the water body as per the Geographic Name Information System
+  * SITE_ID - ID for the site as per the WQP
+  * MonitoringLocationName - Name of the site as per WQP
+  * IsInsideLake - True/False depending on whether the site is inside the water body or not
+  * DistToShore(m) - Distance of the site to the shore of the water body in meters
 
 ### Usage Guide ###
 
