@@ -3,7 +3,6 @@ import shapefile
 import pandas as pd
 from shapely.geometry import *
 from simpledbf import Dbf5
-from pywqp import pywqp_client
 from geopandas import *
 import os,glob
 import shutil
