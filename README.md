@@ -12,11 +12,11 @@ The 6 csv files generated in the dataset are:
   SHAPE_AREA(sqdecimaldegrees) - Area of the water body shape in square decimal degrees
     
 2.*Bounding Box* - Table that stores details about the bounding box - coordinates of each WB read from Shapefiles in NHD. Attributes of   this table are:
-  *BB_ID - ID for the water body bounding box
-  *North - Minimum Latitude
-  *South - Maximum Latitude
-  *West - Minimum Longitude
-  *East - Maximum Longitude
+  * BB_ID - ID for the water body bounding box
+  * North - Minimum Latitude
+  *  South - Maximum Latitude
+  * West - Minimum Longitude
+  * East - Maximum Longitude
   
 3.*Sites* - Table that stores details of the sites (obtained from WQP)
 
