@@ -41,20 +41,20 @@ The 6 csv files generated in the dataset are:
 
 To retrieve site information for water bodies in a state, following steps are to be done.
 
-**1. Obtain the water bodies (WB) data from NHD**
+**1. Obtain the water bodies (WB) data from NHD**<br />
 The NHD High Resolution is available on the [NHD web-site](http://prd-tnm.s3-website-us-west-2.amazonaws.com/?prefix=StagedProducts/Hydrography/NHD/State/HighResolution/Shape/) as a shapefile or file geodatabase. These can be downloaded by state. Here the scripts use them in shapefile format. Download shapefiles for water bodies of the state of interest from here. This is the zip file extension. Unzip the folder and store the "Shape" folder locally in the path NHD_High_Resolution/NHD_<state> (for eg., NHD_High_Resolution/NHD_Washington).
 
-**2. Obtain the site csv files from WQP**
+**2. Obtain the site csv files from WQP**<br />
 The site data can be downloaded from [WQP portal](https://www.waterqualitydata.us/portal/). In the **Location** block, enter the country and state. In the **Site Parameters**, choose site type as *Lake, Reservoir, Impoundment*. In **Select data to download**, choose *Site data only*. Then click on the **DOWNLOAD** button. 
 The downloaded csv file containing the site data for each state is stored locally in the path WQP_Sites/sites_<statecode.csv> (for eg., WQP_Sites/sites_WA.csv).
 
-**3. Create the following folders**
+**3. Create the following folders**<br />
 Create the folder paths named "ChunksPath" (to store chunks of data obtained from the NHD dataset) and "LakeToSiteMappings/<STATE>" (for e.g., LakeToSiteMappings/WASHINGTON, to store lake to site mappings files).
 
-**4. Install the following python packages**
+**4. Install the following python packages**<br />
 Install geopandas (which in turn installs Shapely), pyshp, simpledbf, and geopy packages. `pip install` should work in most cases however in Windows environment, geopandas might have to be installed using `conda install -c conda-forge geopandas`.
 
-**5. Retrieve the dataset (6 tables) for WBs in the state**
+**5. Retrieve the dataset (6 tables) for WBs in the state**<br />
 In this step run the notebook Lake2Site.ipynb. 
 
 
@@ -65,10 +65,10 @@ The raw site data is obtained for each state from WQP using a web service call. 
 **1. Create the following folder**<br />
 Create the folder path named "data" to store the output. 
 
-**2. Install the following python package**
+**2. Install the following python package**<br />
 Install pywqp which is a generic scriptable Python client for downloading datasets from the Web Services offered by the USGS/EPA Water Quality Portal: an alternative to manual use of the WQP website. This package can be installed using `pip install git+https://github.com/USGS-CIDA/pywqp.git --upgrade`.
 
-**3. Retrieve the raw site data for the particular state**
+**3. Retrieve the raw site data for the particular state**<br />
 In this part, run the notebook GETSITEDATA.ipynb.
 
 
