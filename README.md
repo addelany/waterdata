@@ -62,13 +62,13 @@ In this step run the notebook Lake2Site.ipynb.
 The raw site data is obtained for each state from WQP using a web service call. The raw data is then filtered based on the Lake to site mappings obtained in Part 1.
 
 ### Usage guide ###
-1. Create the following folder
+**1. Create the following folder**<br />
 Create the folder path named "data" to store the output. 
 
-2. **Install the following python package**
+**2. Install the following python package**
 Install pywqp which is a generic scriptable Python client for downloading datasets from the Web Services offered by the USGS/EPA Water Quality Portal: an alternative to manual use of the WQP website. This package can be installed using `pip install git+https://github.com/USGS-CIDA/pywqp.git --upgrade`.
 
-3. Retrieve the raw site data for the particular state
+**3. Retrieve the raw site data for the particular state**
 In this part, run the notebook GETSITEDATA.ipynb.
 
 
